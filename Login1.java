@@ -17,7 +17,7 @@ public class Login1 extends JFrame {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    Login frame = new Login(); 
+                    Login1 frame = new Login1(); 
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -70,7 +70,6 @@ public class Login1 extends JFrame {
         btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 26));
         btnNewButton.setBounds(481, 392, 162, 73);
         btnNewButton.addActionListener(new ActionListener() {
-
             public void actionPerformed(ActionEvent e) {
                 String userName = textField.getText(); 
                 char[] password = passwordField.getPassword();
@@ -86,8 +85,8 @@ public class Login1 extends JFrame {
                     st.setString(2, passwordString);
                     ResultSet rs = st.executeQuery();
                     if (rs.next()) {
-                        String name = rs.getString("name");
-                        showCrudFrame();
+                        setVisible(false); // Hide login frame
+                        showCrudFrame();   // Show CRUD frame
                     } else {
                         JOptionPane.showMessageDialog(btnNewButton, "Login gagal. Username atau Password salah");
                     }
@@ -159,10 +158,8 @@ public class Login1 extends JFrame {
                 }
             });
             crudFrame.getContentPane().add(btnLogout);
-
-            setVisible(false);
-            crudFrame.setVisible(true);
         }
+        crudFrame.setVisible(true); // Make sure to show the CRUD frame
     }
 
     private void displayMahasiswa() {

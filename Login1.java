@@ -16,7 +16,7 @@ public class Login1 extends JFrame {
     public static void main(String[] args) throws Exception {
         String str = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
         UIManager.setLookAndFeel(str);
-        
+
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
@@ -30,48 +30,48 @@ public class Login1 extends JFrame {
     }
 
     public Login1() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-        setBounds(100, 70, 1014, 597); 
-        setResizable(false); 
-        contentPane = new JPanel(); 
-        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5)); 
-        setContentPane(contentPane); 
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(100, 70, 370, 290);
+        setResizable(false);
+        contentPane = new JPanel();
+        contentPane.setBorder(new EmptyBorder (5, 5, 5, 5));
+        setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        JLabel lblNewLabel = new JLabel("Login"); 
-        lblNewLabel.setForeground(Color.BLACK); 
-        lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 46)); 
-        lblNewLabel.setBounds(423, 13, 273, 93); 
+        JLabel lblNewLabel = new JLabel("Login");
+        lblNewLabel.setForeground (Color.BLACK);
+        lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
+        lblNewLabel.setBounds(140, 8, 273, 93);
         contentPane.add(lblNewLabel);
-        
+
         textField = new JTextField();
-        textField.setFont(new Font("Tahoma", Font.PLAIN, 32)); 
-        textField.setBounds(481, 170, 281, 68); 
-        contentPane.add(textField); 
+        textField.setFont(new Font("Tahoma", Font. PLAIN, 16));
+        textField.setBounds(150, 83, 150, 30);
+        contentPane.add(textField);
         textField.setColumns(10);
-        
+
         passwordField = new JPasswordField();
-        passwordField.setFont(new Font("Tahoma", Font.PLAIN, 32)); 
-        passwordField.setBounds(481, 286, 281, 68); 
+        passwordField.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        passwordField.setBounds(150, 130, 150, 30);
         contentPane.add(passwordField);
         
-        JLabel lblUsername = new JLabel("Username"); 
-        lblUsername.setBackground(Color.BLACK); 
-        lblUsername.setForeground(Color.BLACK); 
-        lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 31)); 
-        lblUsername.setBounds(250, 166, 193, 52); 
+        JLabel lblUsername = new JLabel("Username");
+        lblUsername.setBackground (Color.BLACK);
+        lblUsername.setForeground (Color.BLACK);
+        lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        lblUsername.setBounds(55, 70, 193, 52);
         contentPane.add(lblUsername);
-        
+
         JLabel lblPassword = new JLabel("Password");
-        lblPassword.setForeground(Color.BLACK); 
-        lblPassword.setBackground(Color.CYAN); 
-        lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 31)); 
-        lblPassword.setBounds(250, 286, 193, 52); 
+        lblPassword.setForeground (Color.BLACK);
+        lblPassword.setBackground (Color.CYAN);
+        lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        lblPassword.setBounds(55, 120, 193, 52);
         contentPane.add(lblPassword);
-        
+
         btnNewButton = new JButton("Login");
-        btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 26));
-        btnNewButton.setBounds(481, 392, 162, 73);
+        btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 16));
+        btnNewButton.setBounds (120, 180, 100, 30);
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 String userName = textField.getText(); 

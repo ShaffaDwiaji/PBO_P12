@@ -13,7 +13,10 @@ public class Login1 extends JFrame {
     private JPanel contentPane; 
     private JFrame crudFrame;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        String str = "com.sun.java.swing.plaf.windows.WindowsLookAndFeel";
+        UIManager.setLookAndFeel(str);
+        
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
